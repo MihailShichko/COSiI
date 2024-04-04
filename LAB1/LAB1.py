@@ -2,7 +2,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 import math
 
-N = 128 # число дискретных отсчетов
+N = 64 # число дискретных отсчетов
 T = 2 * np.pi
 
 # исходный сигнал
