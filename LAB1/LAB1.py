@@ -81,7 +81,9 @@ def build_graphs(x, y, res, rev_res, name):
 
     # ФЧХ БПФ
     fft_pfc = fig.add_subplot(4,1,3)
-    fft_pfc.plot(np.real(res), np.imag(res),color='red')
+    fft_pfc.plot(np.arctan(np.imag(res) / np.real(res)), color='red')
+    #fft_pfc.plot(np.sqrt(np.real(res)**2 + np.imag(res)**2), color='blue')
+    #fft_pfc.plot(np.real(res) + np.imag(res), color='red');
     fft_pfc.set_xlabel('частота')
     fft_pfc.set_ylabel('фаза')
     fft_pfc.set_title('БПФ-ФЧХ')
